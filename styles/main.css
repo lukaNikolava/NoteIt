@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Kanit", sans-serif;
+}
+input,
+textarea:focus{
+    outline-width: 0;
+}
+html , body{
+    height: 100%;
+}
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/mainBackground.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -99;
+}
+header{
+    background-color: rgba(65,6,98,255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 15px 30px;
+}
+header h1{
+    font-size: 36px;
+    transition: all .4s;
+}
+header h1:hover{
+    color: #c9c9c9;
+}
+.userLogNav ul{
+    display: flex;
+    gap: 20px;
+}
+.userLogNav li{
+    font-size: 20px;
+    position: relative;
+}
+.userLogNav li::before{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    transition: all .3s;
+}
+.userLogNav li:hover::before{
+    width: 100%;
+}
+header nav{
+    cursor: pointer;
+}
+
+/* Main sections */
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    width: 80%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+.noteCreator{
+    width: 80%;
+    padding-bottom: 20px;
+}
+.noteCreatorHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 400;
+}
+#noteForm{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#noteForm #content{
+    height: 200px;
+}
+#noteForm #content,
+#noteForm input[type="text"]{
+    padding: 10px;
+    border: 0;
+}
+#noteForm button[type="submit"]{
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    width: fit-content;
+    cursor: pointer;
+    transition: all .4s;
+}
+#noteForm button[type="submit"]:hover{
+    background-color: #fff;
+    border: 1px solid rgba(84,26,161,255);
+    color: rgba(84,26,161,255);
+}
+
+
+
+.cardsSection{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.noteCard{
+    background-color: rgba(64, 6, 98, 0.417);
+    height: 400px;
+}
+.cardHeader{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    height: 10%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardContent{
+    height: 90%;
+    color: #fff;
+    font-size: 16px;
+    padding: 0px 20px;
+}
+
+
+@media (min-width:0px) and (max-width : 900px){
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .userLogNav{
+        display: none;
+    }
+    .noteCreator h2{
+        font-size: 20px;
+    }
+    .container{
+        width: 100%;
+    }
+    .cardsSection{
+        grid-template-columns: 1fr;
+    }
+}
