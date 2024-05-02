@@ -130,6 +130,7 @@ main{
     gap: 30px;
 }
 .noteCard{
+    padding: 10px 10px;
     background-color: rgba(64, 6, 98, 0.417);
     height: 400px;
 }
@@ -144,10 +145,33 @@ main{
     align-items: center;
 }
 .cardContent{
-    height: 90%;
+    height: 80%;
     color: #fff;
     font-size: 16px;
     padding: 0px 20px;
+}
+.deleteBtnContainer{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+.deleteBtn{
+    height: 100%;
+    width: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    background: none;
+    transition: all .4s;
+}
+.deleteBtn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
 
 
