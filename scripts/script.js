@@ -22,6 +22,7 @@ addNoteBtn.addEventListener('click' , ()=>{
         let deleteBtnContainer = createElementAndAppend('div', 'deleteBtnContainer', "", newNote);
         let deleteBtn = createElementAndAppend('div', 'deleteBtn', "Delete", deleteBtnContainer);
 
+
         document.querySelector('.cardsSection').appendChild(newNote);
         title.value = '';
         content.value = '';

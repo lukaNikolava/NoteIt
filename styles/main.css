@@ -98,6 +98,7 @@ main{
 }
 #noteForm #content{
     height: 200px;
+    resize: none;
 }
 #noteForm #content,
 #noteForm input[type="text"]{
@@ -120,9 +121,6 @@ main{
     border: 1px solid rgba(84,26,161,255);
     color: rgba(84,26,161,255);
 }
-
-
-
 .cardsSection{
     width: 100%;
     display: grid;
@@ -133,6 +131,7 @@ main{
     padding: 10px 10px;
     background-color: rgba(64, 6, 98, 0.417);
     height: 400px;
+    max-height: 400px;
 }
 .cardHeader{
     color: #fff;
@@ -149,6 +148,17 @@ main{
     color: #fff;
     font-size: 16px;
     padding: 0px 20px;
+
+    overflow-y: auto;
+    word-break: break-all;
+}
+.cardContent::-webkit-scrollbar{
+    width: 2px;
+    background-color: rgba(64, 6, 98, 0.417);
+}
+.cardContent::-webkit-scrollbar-thumb{
+    width: 2px;
+    background-color: rgba(189, 93, 246, 0.417);
 }
 .deleteBtnContainer{
     height: 10%;
